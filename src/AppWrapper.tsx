@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
+import {ActivityIndicator} from "react-native";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
+import {navigationRef} from "./RootNavigation";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Colors from "./constants/Colors";
 
 // Screens
 import IntroductionScreen from "./screens/IntroductionScreen";
+import MenuScreen from "./screens/MenuScreen";
 import HomeScreen from "./screens/HomeScreen";
-import {ActivityIndicator} from "react-native";
-import Colors from "./constants/Colors";
+import PadeshScreen from "./screens/PadeshScreen";
 
 const Stack = createStackNavigator();
 
@@ -29,8 +32,18 @@ const setStoreData = async (key, value) => {
     }
 }
 
+const removeStoreData = async (key) => {
+    try  {
+        return await AsyncStorage.removeItem(key);
+    } catch (err) {
+        console.log('Error occured while adding ' + key + ' data to async store', err);
+        return false;
+    }
+}
+
 global.getStoreData = getStoreData;
 global.setStoreData = setStoreData;
+global.removeStoreData = removeStoreData;
 
 function AppWrapper() {
     const [skipIntro, setSkipIntro] = useState<boolean|null>(null);
@@ -51,12 +64,14 @@ function AppWrapper() {
     }
 
     return (
-        <NavigationContainer>
+        <NavigationContainer  ref={navigationRef}>
             <Stack.Navigator initialRouteName={skipIntro ? "Home" : "Introduction"} screenOptions={{
                 headerShown: false,
             }}>
                 <Stack.Screen name={"Introduction"} component={IntroductionScreen} />
                 <Stack.Screen name={"Home"} component={HomeScreen} />
+                <Stack.Screen name={"Menu"} component={MenuScreen} />
+                <Stack.Screen name={"Padesh"} component={PadeshScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

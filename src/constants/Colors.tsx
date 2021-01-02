@@ -5,6 +5,7 @@ const Colors = {
     lightText: '#96A7AF',
     primary: '#3ED598',
     darkBg: '#30444E',
+    mainBg: '#22343C',
 };
 
 export default Colors;
