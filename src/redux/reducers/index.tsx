@@ -1,8 +1,8 @@
 import {combineReducers} from "redux";
-import CounterReducer from "./CounterReducer";
+import PadeshReducer from "./PadeshReducer";
 
 const reducers = combineReducers({
-    CounterReducer,
+    PadeshReducer,
 });
 
 export default reducers;
