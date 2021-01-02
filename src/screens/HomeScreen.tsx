@@ -102,7 +102,7 @@ function HomeScreen(props) {
             <ScrollView style={styles.container}>
                 {/* wod: Word Of Day */}
                 <ImageBackground source={require('../res/images/home/word-bg.jpg')} style={styles.wodContainer}>
-                    <Image source={require('../res/images/home/star.png')} width={15} height={15} />
+                    <Image source={require('../res/images/home/star.png')} style={{width: 15, height: 15,}} />
                     <Text style={styles.wodTitle}>Senin için bir kelime</Text>
                     <Text style={styles.wodWord}>любви</Text>
                     <Text style={styles.wodMeaning}>Aşk</Text>
