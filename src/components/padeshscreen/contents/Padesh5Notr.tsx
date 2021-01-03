@@ -6,9 +6,23 @@ const Padesh5Notr = () => {
     return (
         <>
             <Text style={StyleGuide.typography.sectionTitle}>Nötr</Text>
-            <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                Bu padejde herhangi bir değişiklik olmaz.
-            </Text>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <View>
+                    <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
+                        о ➜ о + м{'\n'}
+                        е ➜ е + м{'\n'}
+                        мя ➜ менем
+                    </Text>
+                </View>
+                <View style={{width: 10,}} />
+                <View>
+                    <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
+                        лицо ➜ лицом{'\n'}
+                        море ➜ морем{'\n'}
+                        время ➜ временем
+                    </Text>
+                </View>
+            </View>
         </>
     );
 }
