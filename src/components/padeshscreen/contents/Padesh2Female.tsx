@@ -14,7 +14,7 @@ const Padesh2Female = () => {
                         ь ➜ и
                     </Text>
                 </View>
-                <View style={{width: 20,}} />
+                <View style={{width: 10,}} />
                 <View>
                     <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
                         вода ➜ воды{'\n'}

@@ -14,7 +14,7 @@ const Padesh2Male = () => {
                         ь ➜ я
                     </Text>
                 </View>
-                <View style={{width: 20,}} />
+                <View style={{width: 10,}} />
                 <View>
                     <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
                         брат ➜ брата{'\n'}

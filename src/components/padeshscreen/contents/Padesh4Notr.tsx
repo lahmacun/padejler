@@ -6,9 +6,7 @@ const Padesh4Notr = () => {
     return (
         <>
             <Text style={StyleGuide.typography.sectionTitle}>Nötr</Text>
-            <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                Bu padejde herhangi bir değişiklik olmaz.
-            </Text>
+            <Text style={StyleGuide.typography.tinyText}>Bu padejde bu grup için değişiklik olmaz.</Text>
         </>
     );
 }
