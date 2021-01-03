@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {ActivityIndicator} from "react-native";
+import {ActivityIndicator, View} from "react-native";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import {navigationRef} from "./RootNavigation";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Colors from "./constants/Colors";
+import {useFonts} from "expo-font";
 
 // Screens
 import IntroductionScreen from "./screens/IntroductionScreen";
@@ -48,6 +49,10 @@ global.removeStoreData = removeStoreData;
 
 function AppWrapper() {
     const [skipIntro, setSkipIntro] = useState<boolean|null>(null);
+    const [loaded] = useFonts({
+        'SF Pro Display': require('./res/fonts/SF-Pro-Display.otf'),
+    });
+
     global.getStoreData('@skipIntroduction').then(data => {
         if (data === null) {
             setSkipIntro(false);
@@ -58,9 +63,11 @@ function AppWrapper() {
         console.log("Error occured while fetching @skipIntroduction data.", err);
     });
 
-    if (skipIntro === null) {
+    if (skipIntro === null || !loaded) {
         return (
-            <ActivityIndicator size={'large'} color={Colors.primaryDark} />
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: Colors.mainBg}}>
+                <ActivityIndicator size={'large'} color={Colors.primaryDark} />
+            </View>
         );
     }
 
