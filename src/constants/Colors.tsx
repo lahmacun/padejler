@@ -4,6 +4,7 @@ const Colors = {
     lighterText: '#FFFFFF',
     lightText: '#96A7AF',
     primary: '#3ED598',
+    secondary: '#FFC542',
     darkBg: '#30444E',
     mainBg: '#22343C',
 };
