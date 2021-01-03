@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, View} from "react-native";
 import StyleGuide from "../../../constants/StyleGuide";
+import SH from "../SecondaryHighlight";
+import PH from "../PrimaryHighlight";
 
 const Padesh2Female = () => {
     return (
@@ -18,10 +20,10 @@ const Padesh2Female = () => {
                 <View style={{width: 10,}} />
                 <View>
                     <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                        сестра ➜ сестрой{'\n'}
-                        неделя ➜ ределей{'\n'}
-                        мария ➜ марией{'\n'}
-                        дверь ➜ дверью
+                        сестр<SH>а</SH> ➜ сестр<PH>ой</PH>{'\n'}
+                        недел<SH>я</SH> ➜ редел<PH>ей</PH>{'\n'}
+                        мар<SH>ия</SH> ➜ мари<PH>ей</PH>{'\n'}
+                        двер<SH>ь</SH> ➜ двер<PH>ью</PH>
                     </Text>
                 </View>
             </View>

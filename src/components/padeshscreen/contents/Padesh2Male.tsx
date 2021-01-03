@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, View} from "react-native";
 import StyleGuide from "../../../constants/StyleGuide";
+import SH from "../SecondaryHighlight";
+import PH from "../PrimaryHighlight";
 
 const Padesh2Male = () => {
     return (
@@ -9,7 +11,7 @@ const Padesh2Male = () => {
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <View>
                     <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                        ☐ ➜ ☐ + а{'\n'}
+                        ◻️ ➜ ◻️ + а{'\n'}
                         й ➜ я{'\n'}
                         ь ➜ я
                     </Text>
@@ -17,10 +19,10 @@ const Padesh2Male = () => {
                 <View style={{width: 10,}} />
                 <View>
                     <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                        брат ➜ брата{'\n'}
-                        стол ➜ стола{'\n'}
-                        герой ➜ героя{'\n'}
-                        учитель ➜ учителя
+                        бра<SH>т</SH> ➜ бра<PH>та</PH>{'\n'}
+                        сто<SH>л</SH> ➜ сто<PH>ла</PH>{'\n'}
+                        геро<SH>й</SH> ➜ геро<PH>я</PH>{'\n'}
+                        учител<SH>ь</SH> ➜ учител<PH>я</PH>
                     </Text>
                 </View>
             </View>

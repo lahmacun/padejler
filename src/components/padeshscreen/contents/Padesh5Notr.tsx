@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, View} from "react-native";
 import StyleGuide from "../../../constants/StyleGuide";
+import SH from "../SecondaryHighlight";
+import PH from "../PrimaryHighlight";
 
 const Padesh5Notr = () => {
     return (
@@ -17,9 +19,9 @@ const Padesh5Notr = () => {
                 <View style={{width: 10,}} />
                 <View>
                     <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                        лицо ➜ лицом{'\n'}
-                        море ➜ морем{'\n'}
-                        время ➜ временем
+                        лиц<SH>о</SH> ➜ лиц<PH>ом</PH>{'\n'}
+                        мор<SH>е</SH> ➜ мор<PH>ем</PH>{'\n'}
+                        вре<SH>мя</SH> ➜ вре<PH>менем</PH>
                     </Text>
                 </View>
             </View>
