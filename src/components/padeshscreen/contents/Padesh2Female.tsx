@@ -6,9 +6,23 @@ const Padesh2Female = () => {
     return (
         <>
             <Text style={StyleGuide.typography.sectionTitle}>Kadın</Text>
-            <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
-                Bu padejde herhangi bir değişiklik olmaz.
-            </Text>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <View>
+                    <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
+                        а ➜ ы{'\n'}
+                        я ➜ и{'\n'}
+                        ь ➜ и
+                    </Text>
+                </View>
+                <View style={{width: 20,}} />
+                <View>
+                    <Text style={{...StyleGuide.typography.tinyText, marginTop: 10,}}>
+                        вода ➜ воды{'\n'}
+                        неделя ➜ недели{'\n'}
+                        дверь ➜ двери
+                    </Text>
+                </View>
+            </View>
         </>
     );
 }
