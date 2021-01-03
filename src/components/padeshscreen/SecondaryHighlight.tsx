@@ -5,7 +5,7 @@ import Colors from "../../constants/Colors";
 
 const SH = (props) => {
     return (
-        <Text style={{...StyleGuide.typography.tinyText, color: Colors.secondary}}>{props.children}</Text>
+        <Text style={{...StyleGuide.typography.tinyText, color: Colors.secondary, ...props.style}}>{props.children}</Text>
     );
 }
 

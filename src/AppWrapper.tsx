@@ -11,6 +11,7 @@ import IntroductionScreen from "./screens/IntroductionScreen";
 import MenuScreen from "./screens/MenuScreen";
 import HomeScreen from "./screens/HomeScreen";
 import PadeshScreen from "./screens/PadeshScreen";
+import CreditsScreen from "./screens/CreditsScreen";
 
 const Stack = createStackNavigator();
 
@@ -72,6 +73,7 @@ function AppWrapper() {
                 <Stack.Screen name={"Home"} component={HomeScreen} />
                 <Stack.Screen name={"Menu"} component={MenuScreen} />
                 <Stack.Screen name={"Padesh"} component={PadeshScreen} />
+                <Stack.Screen name={"Credits"} component={CreditsScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

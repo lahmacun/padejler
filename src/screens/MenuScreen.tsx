@@ -26,7 +26,7 @@ function MenuItem(props) {
     );
 }
 
-function MenuScreen() {
+function MenuScreen(props) {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -38,7 +38,7 @@ function MenuScreen() {
                     icon={(<Image source={require('../res/images/common/icons/heart.png')} style={{width: 24, height: 24}} />)}
                     label={"Teşekkürler"}
                     onPress={() => {
-
+                        props.navigation.navigate('Credits');
                     }}
                 />
                 <MenuItem
